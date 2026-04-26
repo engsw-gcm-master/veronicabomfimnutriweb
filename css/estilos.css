@@ -345,6 +345,7 @@ section { padding: 6rem 0; }
 }
 
 .receita-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+.receita-card a:hover { text-decoration: none; }
 
 .receita-img {
   height: 180px; background: var(--verde-medio);
