@@ -337,29 +337,40 @@
 </script>
 
 <!-- Instagram Floating Icon -->
-<a href="https://www.instagram.com/veronicabomfim.nutri/" target="_blank" class="instagram-float">
+<a href="https://www.instagram.com/veronicabomfim.nutri/" target="_blank" class="social-float instagram-float">
   <i class="fab fa-instagram"></i>
 </a>
+<!-- WhatsApp Floating Icon -->
+<a href="https://wa.me/5581998645846" target="_blank" class="social-float whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
 <style>
-.instagram-float {
+.social-float {
   position: fixed;
   bottom: 20px;
-  right: 20px;
   width: 50px;
   height: 50px;
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 24px;
-  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.4);
   z-index: 999;
   transition: transform 0.3s;
 }
-.instagram-float:hover {
+.social-float:hover {
   transform: scale(1.1);
+}
+.instagram-float {
+  right: 80px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.4);
+}
+.whatsapp-float {
+  right: 20px;
+  background: #25D366;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
 }
 </style>
 
