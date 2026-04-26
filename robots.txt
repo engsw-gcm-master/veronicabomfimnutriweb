@@ -1,0 +1,29 @@
+# robots.txt - Instruções para Google e outros buscadores
+
+User-agent: *
+Allow: /
+Disallow: 
+
+# Sitemap
+Sitemap: https://seu-site.com/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+
+# Crawl-delay (opcional - segundos entre requisições)
+Crawl-delay: 1
+
+# Comentários:
+# - User-agent: * = aplica a todos os buscadores
+# - Allow: / = permite indexar tudo
+# - Disallow: = nada é proibido
+# - Sitemap: aponta para seu mapa do site

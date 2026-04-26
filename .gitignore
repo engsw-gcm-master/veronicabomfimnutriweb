@@ -1,0 +1,21 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+*.log
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Node (se usar npm depois)
+node_modules/
+package-lock.json
+
+# Arquivos temporários
+~*
+*.tmp
+*.bak
+
+# Arquivos locais
+.env
+.env.local

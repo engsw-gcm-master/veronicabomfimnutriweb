@@ -1,0 +1,38 @@
+{
+  "site": {
+    "titulo": "Verônica Bomfim | Nutricionista Funcional Oncológica",
+    "descricao": "Nutricionista especializada em nutrição clínica aplicada ao tratamento do câncer"
+  },
+  "nutricionista": {
+    "nome": "Verônica Bomfim de Lima",
+    "titulo": "Nutricionista Funcional Oncológica",
+    "especialidade": "Nutrição Clínica Oncológica",
+    "crn": "CRN-6",
+    "bio": "Especializada em nutrição clínica aplicada ao tratamento do câncer, com foco em melhorar a qualidade de vida, fortalecer o sistema imunológico e reduzir os efeitos colaterais da terapia oncológica.",
+    "sobre": "Sou Verônica Bomfim, nutricionista apaixonada por promover saúde de forma humanizada e baseada em evidências. Meu objetivo é entender você como um todo — sua rotina, preferências e necessidades — para criar um plano alimentar que realmente funcione na sua vida."
+  },
+  "contato": {
+    "whatsapp": "+5581998645846",
+    "whatsapp_link": "https://wa.me/5581998645846",
+    "instagram": "@veronicabomfim.nutri",
+    "email": "veronicabomfim.nutri@gmail.com",
+    "localizacao": "Recife, Pernambuco",
+    "atendimento": "Presencial e Online"
+  },
+  "imagens": {
+    "foto_principal": "imagens/foto-veronica.jpeg",
+    "favicon": null
+  },
+  "cores": {
+    "verde_escuro": "#394233",
+    "marrom_quente": "#bf9566",
+    "bege_claro": "#ecd7ba",
+    "fundo_claro": "#FAF9F7",
+    "branco": "#ffffff"
+  },
+  "seo": {
+    "keywords": "nutricionista, nutrição funcional, oncologia, nutrição clínica, Recife, consulta nutricional",
+    "author": "Verônica Bomfim",
+    "language": "pt-BR"
+  }
+}
