@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza de Frigideira | Verônica Bomfim</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <style>
+    body { font-family: 'TT Norms', sans-serif; line-height: 1.6; color: #333; background: #faf8f5; margin: 0; padding: 0; }
+    .receita-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+    .receita-header { text-align: center; margin-bottom: 2rem; }
+    .receita-header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--verde-escuro, #2d5a47); margin-bottom: 0.5rem; }
+    .receita-tag { background: var(--verde-escuro, #2d5a47); color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+    .receita-meta { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; color: #666; }
+    .receita-meta span { display: flex; align-items: center; gap: 0.5rem; }
+    .receita-section { background: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .receita-section h2 { font-family: 'Playfair Display', serif; color: var(--verde-escuro, #2d5a47); margin-top: 0; }
+    .ingredientes-lista { list-style: none; padding: 0; }
+    .ingredientes-lista li { padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem; }
+    .ingredientes-lista li:before { content: "✓"; color: var(--verde-escuro, #2d5a47); font-weight: bold; }
+    .modo-preparo { counter-reset: step; list-style: none; padding: 0; }
+    .modo-preparo li { padding: 1rem 0; padding-left: 3rem; position: relative; border-left: 2px solid #ddd; margin-left: 1rem; }
+    .modo-preparo li:before { counter-increment: step; content: counter(step); position: absolute; left: -1rem; width: 2rem; height: 2rem; background: var(--verde-escuro, #2d5a47); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; }
+    .modo-preparo li:last-child { border-left: none; }
+    .voltar-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--verde-escuro, #2d5a47); text-decoration: none; font-weight: 500; margin-bottom: 1rem; }
+    .voltar-link:hover { text-decoration: underline; }
+    .dica { background: #e8f5e9; padding: 1rem; border-radius: 8px; border-left: 4px solid var(--verde-escuro, #2d5a47); margin-top: 1rem; }
+    .dica strong { display: block; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <div class="receita-container">
+    <a href="../index.html#receitas" class="voltar-link">← Voltar para Receitas</a>
+    
+    <div class="receita-header">
+      <span class="receita-tag">Jantar</span>
+      <h1>Pizza de Frigideira</h1>
+      <div class="receita-meta">
+        <span>⏱️ 15 minutos</span>
+        <span>🍕 2 porções</span>
+      </div>
+    </div>
+
+    <div class="receita-section">
+      <h2>Ingredientes</h2>
+      <ul class="ingredientes-lista">
+        <li>2 colheres de sopa de massa de pizza integral (ou massa de pizza normal)</li>
+        <li>1 ovo</li>
+        <li>2 colheres de sopa de queijo mussarela ralado</li>
+        <li>4 tblheres de sopa de molho de tomate natural</li>
+        <li>Orégano a gosto</li>
+        <li>Azeite</li>
+        <li>Sal e pimenta a gosto</li>
+        <li>Recheio: azeitonas, cebola, tomate, pepperoni, frango desfiado, ou o que preferir!</li>
+      </ul>
+    </div>
+
+    <div class="receita-section">
+      <h2>Modo de Preparo</h2>
+      <ol class="modo-preparo">
+        <li>Em um bowls, misture a massa de pizza com o ovo até ficar homogêneo.</li>
+        <li>Aqueça uma frigideira antiaderente em fogo médio-baixo e adicione um fio de azeite.</li>
+        <li>Despeje a massa na frigideira e espalhe formando um disco uniforme.</li>
+        <li>Cozinhe por cerca de 3-4 minutos até a base dourar.</li>
+        <li> vire a massa e adicione o molho de tomate, espalhe o molho sobre a massa.</li>
+        <li>Adicione as azeitonas, a mussarela e o recheio escolher.</li>
+        <li>Tampe a frigideira e cozinhe por mais 3-4 minutos, até o queijo derreter.</li>
+        <li>Retire do fogo, deixe descansar por 1 minuto e sirva!</li>
+      </ol>
+      
+      <div class="dica">
+        <strong>💡 Dica da Verônica</strong>
+        Você pode variar o recheio com frango desfiado, atum, legumes grelhados ou bacon. Use ingredientes frescos e avoidance processed foods para uma opção mais saudável.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
