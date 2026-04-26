@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza com Massa de Linhaça e Amêndoas | Verônica Bomfim</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <style>
+    body { font-family: 'TT Norms', sans-serif; line-height: 1.6; color: #333; background: #faf8f5; margin: 0; padding: 0; }
+    .receita-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+    .receita-header { text-align: center; margin-bottom: 2rem; }
+    .receita-header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--verde-escuro, #2d5a47); margin-bottom: 0.5rem; }
+    .receita-tag { background: var(--verde-escuro, #2d5a47); color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+    .receita-meta { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; color: #666; }
+    .receita-meta span { display: flex; align-items: center; gap: 0.5rem; }
+    .receita-section { background: white; padding: 2rem; border-radius: 12px; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .receita-section h2 { font-family: 'Playfair Display', serif; color: var(--verde-escuro, #2d5a47); margin-top: 0; }
+    .ingredientes-lista { list-style: none; padding: 0; }
+    .ingredientes-lista li { padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 0.5rem; }
+    .ingredientes-lista li:before { content: "✓"; color: var(--verde-escuro, #2d5a47); font-weight: bold; }
+    .modo-preparo { counter-reset: step; list-style: none; padding: 0; }
+    .modo-preparo li { padding: 1rem 0; padding-left: 3rem; position: relative; border-left: 2px solid #ddd; margin-left: 1rem; }
+    .modo-preparo li:before { counter-increment: step; content: counter(step); position: absolute; left: -1rem; width: 2rem; height: 2rem; background: var(--verde-escuro, #2d5a47); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; }
+    .modo-preparo li:last-child { border-left: none; }
+    .voltar-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--verde-escuro, #2d5a47); text-decoration: none; font-weight: 500; margin-bottom: 1rem; }
+    .voltar-link:hover { text-decoration: underline; }
+    .dica { background: #e8f5e9; padding: 1rem; border-radius: 8px; border-left: 4px solid var(--verde-escuro, #2d5a47); margin-top: 1rem; }
+    .dica strong { display: block; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <div class="receita-container">
+    <a href="../index.html#receitas" class="voltar-link">← Voltar para Receitas</a>
+    
+    <div class="receita-header">
+      <span class="receita-tag">Jantar</span>
+      <h1>Pizza com Massa de Linhaça e Amêndoas</h1>
+      <div class="receita-meta">
+        <span>⏱️ 25 minutos</span>
+        <span>🍕 2 porções</span>
+      </div>
+    </div>
+
+    <div class="receita-section">
+      <h2>Ingredientes</h2>
+      <h3>Massa:</h3>
+      <ul class="ingredientes-lista">
+        <li>1 xícara de farelo de aveia</li>
+        <li>1/2 xícara de linhaça dourada moída</li>
+        <li>1/2 xícara de amêndoas trituradas</li>
+        <li>2 colheres de sopa de chia</li>
+        <li>1 colher de chá de fermento químico</li>
+        <li>1 pitada de sal</li>
+        <li>1 ovo</li>
+        <li>1/2 xícara de água</li>
+      </ul>
+      <h3>Recheio:</h3>
+      <ul class="ingredientes-lista">
+        <li>1/2 xícara de molho de tomate natural</li>
+        <li>1 tomate médio fatiado</li>
+        <li>1/4 de cebola roxa em rodelas</li>
+        <li>Azeitonas pretas</li>
+        <li>1/2 xícara de mussarela rallada</li>
+        <li>Orégano a gosto</li>
+        <li>Folhas de manjericão fresco</li>
+      </ul>
+    </div>
+
+    <div class="receita-section">
+      <h2>Modo de Preparo</h2>
+      <ol class="modo-preparo">
+        <li>Misture o farelo de aveia, linhaça, amêndoas, chia, fermento e sal em um bowls.</li>
+        <li>Adicione o ovo e a água, misturando bem até formar uma massahomogênea.</li>
+        <li>Deixe a massa descansar por 10 minutos para as sementes absorverem a umidade.</li>
+        <li>Preaqueça o forno a 200°C (400°F).</li>
+        <li>Forre uma forma de pizza com papel Antiaderente e Abra a massa com as mãos ou um rolo.</li>
+        <li>Leve ao forno por 10-12 minutos até as bordas dourarem.</li>
+        <li>Retire do forno, adicione o molho de tomate, o tomate, a cebola, as azeitonas e a mussarela.</li>
+        <li>Leve ao forno novamente por 8-10 minutos até o queijo derreter.</li>
+        <li>Retire do forno, finalize com orégano e manjericão fresco. Sirva quente!</li>
+      </ol>
+      
+      <div class="dica">
+        <strong>💡 Dica da Verônica</strong>
+        Essa massa é rica em ômega-3, fibras e proteínas. É uma opção sem glúten e muito mais nutritiva que a massa tradicional. Substitua as amêndoas por castanha-de-caju para uma versão mais econômica.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
