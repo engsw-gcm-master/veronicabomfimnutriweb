@@ -347,6 +347,10 @@
   });
 </script>
 
+<!-- Eventos Floating Icon -->
+<a href="#" onclick="abrirPopupEventos(event)" class="social-float eventos-float">
+  <i class="fas fa-award"></i>
+</a>
 <!-- Instagram Floating Icon -->
 <a href="https://www.instagram.com/veronicabomfim.nutri/" target="_blank" class="social-float instagram-float">
   <i class="fab fa-instagram"></i>
@@ -377,6 +381,14 @@
 .social-float:hover {
   transform: scale(1.1);
 }
+.eventos-float {
+  right: 200px;
+  background: var(--verde-escuro);
+  box-shadow: 0 4px 15px rgba(57, 66, 51, 0.4);
+}
+.eventos-float:hover {
+  background: var(--verde-medio);
+}
 .instagram-float {
   right: 140px;
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
@@ -392,7 +404,237 @@
   background: #EA4335;
   box-shadow: 0 4px 15px rgba(234, 67, 53, 0.4);
 }
+
+/* Popup Eventos */
+.popup-eventos-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(57, 66, 51, 0.6);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-eventos-overlay.ativo {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.popup-eventos {
+  background: var(--fundo-claro);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(57, 66, 51, 0.3);
+  animation: slideUp 0.4s ease;
+  position: relative;
+}
+
+.popup-eventos-header {
+  background: var(--verde-escuro);
+  color: var(--branco);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.popup-eventos-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.popup-eventos-header h3 i {
+  color: var(--marrom-quente);
+}
+
+.popup-eventos-fechar {
+  background: none;
+  border: none;
+  color: var(--branco);
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.popup-eventos-fechar:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.popup-eventos-body {
+  padding: 2rem;
+}
+
+.evento-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--branco);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--bege-claro);
+  transition: all 0.3s;
+}
+
+.evento-card:hover {
+  border-color: var(--marrom-quente);
+  box-shadow: 0 4px 20px rgba(57, 66, 51, 0.08);
+}
+
+.evento-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--bege-claro);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.evento-info h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--verde-escuro);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.evento-info .evento-data {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--marrom-quente);
+  margin-bottom: 0.5rem;
+}
+
+.evento-info p {
+  font-size: 15px;
+  color: var(--cinza-suave);
+  line-height: 1.6;
+}
+
+.popup-eventos-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--bege-claro);
+}
+
+.popup-eventos-intro p {
+  color: var(--cinza-suave);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .popup-eventos {
+    width: 95%;
+    max-height: 90vh;
+  }
+  .popup-eventos-header {
+    padding: 1rem 1.5rem;
+  }
+  .popup-eventos-body {
+    padding: 1rem;
+  }
+  .evento-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .evento-icon {
+    margin: 0 auto;
+  }
+}
 </style>
+
+<!-- Popup Eventos -->
+<div class="popup-eventos-overlay" id="popupEventos">
+  <div class="popup-eventos">
+    <div class="popup-eventos-header">
+      <h3><i class="fas fa-award"></i> Participações em Eventos</h3>
+      <button class="popup-eventos-fechar" onclick="fecharPopupEventos()">&times;</button>
+    </div>
+    <div class="popup-eventos-body">
+      <div class="popup-eventos-intro">
+        <p>Confira os eventos que a Verônica Bomfim já participou. Atividades que demonstram experiência e comprometimento com a área de nutrição e saúde.</p>
+      </div>
+      <div class="eventos-lista" id="eventos-lista">
+        <div class="evento-card">
+          <div class="evento-icon">🏆</div>
+          <div class="evento-info">
+            <h4>Formação em Suplementação Inteligente — Pedro Perim</h4>
+            <div class="evento-data">28 de Março de 2026 · Recife/PE</div>
+            <p>Imersão presencial com o Dr. Pedro Perim (Mestre pela USP), fundador da P2 Nutrition Academy. Evento exclusivo com apenas 80 profissionais, focando em suplementação baseada em evidência científica.</p>
+            <a href="https://www.instagram.com/p/DWzufsUEUhm/" target="_blank" class="artigo-link" style="margin-top: 12px;">
+              <i class="fab fa-instagram"></i> Ver fotos do evento no Instagram →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function abrirPopupEventos(e) {
+  if (e) e.preventDefault();
+  document.getElementById('popupEventos').classList.add('ativo');
+  document.body.style.overflow = 'hidden';
+}
+
+function fecharPopupEventos() {
+  document.getElementById('popupEventos').classList.remove('ativo');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('popupEventos').addEventListener('click', function(e) {
+  if (e.target === this) {
+    fecharPopupEventos();
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    fecharPopupEventos();
+  }
+});
+
+// Popup de eventos - desativado temporariamente
+// setTimeout(() => {
+//   abrirPopupEventos();
+//   setTimeout(() => {
+//     fecharPopupEventos();
+//   }, 5000);
+// }, 3000);
+</script>
 
 </body>
 </html>
