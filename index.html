@@ -256,28 +256,8 @@
     <span class="secao-tag">eBook</span>
     <h2 class="secao-titulo">Nutrição Oncológica <em>na Prática</em></h2>
     <div class="divisor"></div>
-    <div style="display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; justify-content: center;">
-      <div style="flex: 1; min-width: 300px;">
-        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--marrom-escuro);">Guia Completo para Pacientes Oncológicos</h3>
-        <p style="margin-bottom: 1.5rem; line-height: 1.8;">
-          Um guia prático com estratégias nutricionais para fortalecer o sistema imunológico durante o tratamento oncológico. Aprenda sobre alimentação funcional, suplementação e como lidar com os efeitos colaterais da quimioterapia e radioterapia.
-        </p>
-        <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-          <li style="margin-bottom: 0.8rem;">✓ Dicas para ganho de peso saudável</li>
-          <li style="margin-bottom: 0.8rem;">✓ Alimentos que combatem a inflamação</li>
-          <li style="margin-bottom: 0.8rem;">✓ Receitas adaptadas para tratamento</li>
-          <li style="margin-bottom: 0.8rem;">✓ Guia de suplementação segura</li>
-        </ul>
-        <a href="#" class="btn-primario" style="display: inline-block;">Baixar eBook Gratuito</a>
-      </div>
-      <div style="flex: 0 0 300px; text-align: center;">
-        <div style="background: var(--marrom-escuro); color: white; padding: 3rem 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">📗</div>
-          <div style="font-size: 1.2rem; font-weight: bold; margin-bottom: 0.5rem;">eBook Exclusivo</div>
-          <div style="font-size: 0.9rem; opacity: 0.9;">Nutrição Oncológica na Prática</div>
-          <div style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">Por Verônica Bomfim</div>
-        </div>
-      </div>
+    <div class="ebook-grid" id="ebook-grid">
+      <!-- EBOOK É CARREGADO AQUI DO ARQUIVO secoes/ebook/lista-ebook.html -->
     </div>
   </div>
 </section>
@@ -390,7 +370,7 @@
       document.getElementById(elementoId).innerHTML = conteudo;
       
       // Re-aplicar animações após carregar
-      document.querySelectorAll(`#${elementoId} .servico-card, #${elementoId} .receita-card, #${elementoId} .artigo-card`).forEach(el => {
+      document.querySelectorAll(`#${elementoId} .servico-card, #${elementoId} .receita-card, #${elementoId} .artigo-card, #${elementoId} .ebook-card`).forEach(el => {
         el.style.cssText += 'opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease,box-shadow 0.3s;';
         observer.observe(el);
       });
@@ -415,6 +395,7 @@
     carregarSecao('secoes/receitas/lista-receitas.html', 'receitas-grid');
     carregarSecao('secoes/blog/lista-posts.html', 'blog-grid');
     carregarSecao('secoes/artigos/lista-artigos.html', 'artigos-grid');
+    carregarSecao('secoes/ebook/lista-ebook.html', 'ebook-grid');
   });
 </script>
 
