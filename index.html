@@ -66,6 +66,7 @@
     <li><a href="#inicio">Início</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#eventos">Eventos</a></li>
     <li><a href="#receitas">Receitas</a></li>
     <li><a href="#blog">Blog</a></li>
     <li><a href="#artigos">Artigos</a></li>
@@ -137,6 +138,44 @@
     </div>
     <div class="servicos-grid" id="servicos-grid">
       <!-- SERVIÇOS SÃO CARREGADOS AQUI DO ARQUIVO secoes/servicos/lista-servicos.html -->
+    </div>
+  </div>
+</section>
+
+<!-- ========== EVENTOS ========== -->
+<section id="eventos" style="background: var(--bege-claro);">
+  <div class="container">
+    <div class="eventos-header">
+      <span class="secao-tag">Eventos</span>
+      <h2 class="secao-titulo">Participações e <em>Certificações</em></h2>
+      <div class="divisor"></div>
+      <p class="eventos-subtitulo">Histórico de eventos, formações e conquistas profissionais da Verônica Bomfim de Lima</p>
+    </div>
+    <div class="eventos-grid">
+      <div class="evento-card-full">
+        <div class="evento-card-full-icon">🏆</div>
+        <div class="evento-card-full-content">
+          <span class="evento-badge">Formação</span>
+          <h3>Formação em Suplementação Inteligente — Pedro Perim</h3>
+          <div class="evento-card-full-data">28 de Março de 2026 · Recife/PE</div>
+          <p>Imersão presencial com o Dr. Pedro Perim (Mestre pela USP), fundador da P2 Nutrition Academy. Evento exclusivo com apenas 80 profissionais, focando em suplementação baseada em evidência científica.</p>
+          <a href="https://www.instagram.com/p/DWzufsUEUhm/" target="_blank" class="artigo-link">
+            <i class="fab fa-instagram"></i> Ver fotos do evento no Instagram →
+          </a>
+        </div>
+      </div>
+      <div class="evento-card-full">
+        <div class="evento-card-full-icon">🏆</div>
+        <div class="evento-card-full-content">
+          <span class="evento-badge">Congresso</span>
+          <h3>1ª Edição ABNO em Rota – Recife</h3>
+          <div class="evento-card-full-data">7 de Março de 2026 · Recife/PE</div>
+          <p>Evento focado em nutrição oncológica, realizado no auditório da UFPE. Reunindo especialistas para discutir evidências científicas e práticas clínicas.</p>
+          <a href="https://www.instagram.com/p/DVmo4goirjM/" target="_blank" class="artigo-link">
+            <i class="fab fa-instagram"></i> Ver fotos do evento no Instagram →
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -257,19 +296,19 @@
         <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--verde-escuro); margin-bottom: 1.5rem; font-weight: 400;">Envie uma mensagem</h3>
         <div class="form-grupo">
           <label>Seu nome</label>
-          <input type="text" placeholder="Como você se chama?">
+          <input type="text" id="form-nome" placeholder="Como você se chama?">
         </div>
         <div class="form-grupo">
           <label>WhatsApp / Telefone</label>
-          <input type="tel" placeholder="(00) 00000-0000">
+          <input type="tel" id="form-telefone" placeholder="(00) 00000-0000">
         </div>
         <div class="form-grupo">
           <label>E-mail</label>
-          <input type="email" placeholder="seu@email.com">
+          <input type="email" id="form-email" placeholder="seu@email.com">
         </div>
         <div class="form-grupo">
           <label>Tipo de Atendimento</label>
-          <select>
+          <select id="form-atendimento">
             <option>Selecione...</option>
             <option>Consulta Presencial</option>
             <option>Consulta Online</option>
@@ -281,9 +320,9 @@
         </div>
         <div class="form-grupo">
           <label>Mensagem</label>
-          <textarea placeholder="Conte um pouco sobre seus objetivos..."></textarea>
+          <textarea id="form-mensagem" placeholder="Conte um pouco sobre seus objetivos..."></textarea>
         </div>
-        <button class="form-btn" onclick="window.open('https://wa.me/5581998645846','_blank')">
+        <button class="form-btn" onclick="enviarWhatsApp()">
           Enviar Mensagem via WhatsApp
         </button>
       </div>
@@ -544,6 +583,94 @@
   line-height: 1.7;
 }
 
+.eventos-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.eventos-subtitulo {
+  color: var(--cinza-suave);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+
+.eventos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.evento-card-full {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--branco);
+  border-radius: 8px;
+  border: 1px solid var(--bege-claro);
+  transition: all 0.3s;
+}
+
+.evento-card-full:hover {
+  border-color: var(--marrom-quente);
+  box-shadow: 0 8px 30px rgba(57, 66, 51, 0.1);
+  transform: translateY(-4px);
+}
+
+.evento-card-full-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--bege-claro);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.evento-card-full-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--verde-escuro);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.evento-card-full-data {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--marrom-quente);
+  margin-bottom: 1rem;
+}
+
+.evento-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--verde-claro);
+  color: var(--verde-escuro);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .eventos-grid {
+    grid-template-columns: 1fr;
+  }
+  .evento-card-full {
+    flex-direction: column;
+    text-align: center;
+  }
+  .evento-card-full-icon {
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 600px) {
   .popup-eventos {
     width: 95%;
@@ -600,12 +727,41 @@
             </a>
           </div>
         </div>
+        <div class="evento-card">
+          <div class="evento-icon">🏆</div>
+          <div class="evento-info">
+            <h4>1ª Edição ABNO em Rota – Recife</h4>
+            <div class="evento-data">7 de Março de 2026 · Recife/PE</div>
+            <p>Evento focado em nutrição oncológica, realizado no auditório da UFPE. Reunindo especialistas para discutir evidências científicas e práticas clínicas.</p>
+            <a href="https://www.instagram.com/p/DVmo4goirjM/" target="_blank" class="artigo-link" style="margin-top: 12px;">
+              <i class="fab fa-instagram"></i> Ver fotos do evento no Instagram →
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <script>
+function enviarWhatsApp() {
+  const nome = document.getElementById('form-nome').value;
+  const telefone = document.getElementById('form-telefone').value;
+  const email = document.getElementById('form-email').value;
+  const atendimento = document.getElementById('form-atendimento').value;
+  const mensagem = document.getElementById('form-mensagem').value;
+
+  let texto = `Olá Verônica! Vim pelo site.\n\n`;
+  if (nome) texto += `*Nome:* ${nome}\n`;
+  if (telefone) texto += `*Telefone:* ${telefone}\n`;
+  if (email) texto += `*E-mail:* ${email}\n`;
+  if (atendimento && atendimento !== 'Selecione...') texto += `*Interesse:* ${atendimento}\n`;
+  if (mensagem) texto += `\n*Mensagem:*\n${mensagem}`;
+
+  const url = `https://wa.me/5581998645846?text=${encodeURIComponent(texto)}`;
+  window.open(url, '_blank');
+}
+
 function abrirPopupEventos(e) {
   if (e) e.preventDefault();
   document.getElementById('popupEventos').classList.add('ativo');

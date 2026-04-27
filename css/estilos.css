@@ -7,6 +7,7 @@
 :root {
   /* Paleta oficial Verônica Bomfim */
   --verde-escuro: #394233;    /* cor principal - conforme guia */
+  --verde-claro: #8fa888;     /* claro - combina com verde */
   --marrom-quente: #bf9566;   /* destaque principal - conforme guia */
   --bege-claro: #ecd7ba;      /* bege suave - conforme guia */
   --fundo-claro: #FAF9F7;     /* branco/creme - conforme guia */
@@ -423,10 +424,11 @@ section { padding: 6rem 0; }
 
 .artigo-link {
   display: inline-block; margin-top: 1rem;
-  font-size: 13px; letter-spacing: 2px;
+  font-size: 12px; letter-spacing: 1px;
   text-transform: uppercase; color: var(--verde-escuro);
   text-decoration: none; border-bottom: 1px solid var(--marrom-quente);
   padding-bottom: 2px; transition: color 0.3s;
+  white-space: nowrap;
 }
 
 .artigo-link:hover { color: var(--marrom-quente); }
