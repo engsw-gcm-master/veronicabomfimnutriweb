@@ -359,10 +359,7 @@
 <a href="https://wa.me/5581998645846" target="_blank" class="social-float whatsapp-float">
   <i class="fab fa-whatsapp"></i>
 </a>
-<!-- Email Floating Icon -->
-<a href="mailto:veronicabomfim.nutri@gmail.com" class="social-float email-float">
-  <i class="fas fa-envelope"></i>
-</a>
+
 <style>
 .social-float {
   position: fixed;
@@ -381,29 +378,22 @@
 .social-float:hover {
   transform: scale(1.1);
 }
-.eventos-float {
-  right: 200px;
-  background: var(--verde-escuro);
-  box-shadow: 0 4px 15px rgba(57, 66, 51, 0.4);
-}
-.eventos-float:hover {
-  background: var(--verde-medio);
-}
-.instagram-float {
-  right: 140px;
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.4);
-}
 .whatsapp-float {
-  right: 80px;
+  right: 20px;
   background: #25D366;
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
 }
-.email-float {
-  right: 20px;
-  background: #EA4335;
-  box-shadow: 0 4px 15px rgba(234, 67, 53, 0.4);
+.instagram-float {
+  right: 80px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.4);
 }
+.eventos-float {
+  right: 140px;
+  background: var(--verde-escuro);
+  box-shadow: 0 4px 15px rgba(57, 66, 51, 0.4);
+}
+
 
 /* Popup Eventos */
 .popup-eventos-overlay {
@@ -571,6 +561,18 @@
   }
   .evento-icon {
     margin: 0 auto;
+  }
+  .social-float {
+    bottom: 15px;
+  }
+  .whatsapp-float {
+    right: 10px;
+  }
+  .instagram-float {
+    right: 65px;
+  }
+  .eventos-float {
+    right: 120px;
   }
 }
 </style>
