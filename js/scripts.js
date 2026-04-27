@@ -5,18 +5,14 @@
 /* ----- Menu mobile ----- */
 function toggleMenu() {
   const links = document.querySelector('.nav-links');
-  if (links.style.display === 'flex') {
-    links.style.display = 'none';
-  } else {
-    links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:rgba(250,247,242,0.98);padding:2rem;gap:1.5rem;border-bottom:1px solid #e8d5a3;z-index:99;backdrop-filter:blur(8px);';
-  }
+  links.classList.toggle('active');
 }
 
 /* Fechar menu ao clicar em link */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', () => {
     const links = document.querySelector('.nav-links');
-    if (window.innerWidth < 900) links.style.display = 'none';
+    links.classList.remove('active');
   });
 });
 
