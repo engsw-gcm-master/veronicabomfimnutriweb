@@ -19,3 +19,7 @@ package-lock.json
 # Arquivos locais
 .env
 .env.local
+
+# Arquivos de dados sensíveis
+emails.txt
+emails.csv

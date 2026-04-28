@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Verônica Bomfim | Nutricionista Funcional Oncológica">
 <meta name="twitter:description" content="Nutricionista especializada em oncologia funcional em Recife">
-<link rel="canonical" href="https://seu-site.com">
+  <link rel="canonical" href="https://veronicabomfimnutri.com.br">
 <link rel="icon" type="image/jpeg" href="imagens/logo/favicon.jpg?v=1.0">
 <title>Verônica Bomfim | Nutricionista Funcional Oncológica em Recife</title>
 
@@ -35,7 +35,7 @@
   },
   "telephone": "(81) 9 9864-5846",
   "email": "veronicabomfim.nutri@gmail.com",
-  "url": "https://seu-site.com",
+  "url": "https://veronicabomfimnutri.com.br",
   "priceRange": "$$",
   "areaServed": ["Recife", "Pernambuco", "Brasil"],
   "serviceArea": {
@@ -74,7 +74,7 @@
     <li><a href="#contato">Contato</a></li>
     <li><a href="https://wa.me/5581998645846?text=Gostaria%20de%20agendar%20uma%20consulta%20com%20voc%C3%AA%2C%20Ver%C3%B4nica%20Bomfim" class="nav-cta">Agendar Consulta</a></li>
   </ul>
-  <div class="menu-toggle" onclick="toggleMenu()">
+  <div class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false" role="button" tabindex="0">
     <span></span><span></span><span></span>
   </div>
 </nav>
@@ -98,7 +98,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-img-container">
-      <img src="imagens/foto-veronica.jpeg" alt="Verônica Bomfim de Lima" style="width:100%;height:100%;object-fit:cover;object-position: center 30%;">
+        <img src="imagens/foto-veronica.jpeg" alt="Verônica Bomfim de Lima" width="600" height="800" style="width:100%;height:100%;object-fit:cover;object-position: center 30%;">
     </div>
   </div>
 </section>
@@ -108,7 +108,7 @@
   <div class="container">
     <div class="sobre-grid">
       <div class="sobre-img-wrap">
-        <div class="sobre-img-box"><img src="imagens/foto-veronica.jpeg" alt="Verônica Bomfim de Lima" style="width:100%;height:100%;object-fit:cover;object-position: center 30%;"></div>
+        <div class="sobre-img-box"><img src="imagens/foto-veronica.jpeg" alt="Verônica Bomfim de Lima" width="600" height="800" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position: center 30%;"></div>
         <div class="sobre-deco"></div>
       </div>
       <div class="sobre-texto">
@@ -258,17 +258,18 @@
     <h2 class="secao-titulo">Nutrição Oncológica <em>na Prática</em></h2>
     <div class="divisor"></div>
     <div class="ebook-grid" id="ebook-grid">
-      <div class="ebook-card" style="background: white; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 400px; margin: 0 auto; text-align: center;">
+      <div class="ebook-card" style="background: white; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 500px; margin: 0 auto; text-align: center;">
         <div style="font-size: 4rem; margin-bottom: 1rem;">📗</div>
         <h3 style="color: var(--marrom-escuro); font-size: 1.3rem; margin-bottom: 1rem;">Em Breve</h3>
         <p style="line-height: 1.6; margin-bottom: 1.5rem; color: #555;">
           Estamos preparando novos eBooks com conteúdos exclusivos sobre nutrição oncológica, dicas de alimentação saudável e em breve estarão disponíveis para aquisição.
         </p>
-        <p style="color: var(--marrom-quente); font-weight: 600; font-size: 1.1rem;">
-          Fique atento às novidades!
-        </p>
-      </div>
     </div>
+  </div>
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="https://forms.gle/urCnM8Z9TxkheZw39" target="_blank" style="display: inline-block; padding: 12px 30px; background: var(--verde-escuro); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 14px; text-decoration: none;">
+      Quero ser avisado
+    </a>
   </div>
 </section>
 
@@ -410,19 +411,19 @@
 </script>
 
 <!-- Eventos Floating Icon -->
-<a href="#" onclick="abrirPopupEventos(event)" class="social-float eventos-float">
+<a href="#" onclick="abrirPopupEventos(event)" class="social-float eventos-float" aria-label="Ver participações em eventos">
   <i class="fas fa-award"></i>
 </a>
 <!-- Instagram Floating Icon -->
-<a href="https://www.instagram.com/veronicabomfim.nutri/" target="_blank" class="social-float instagram-float">
+<a href="https://www.instagram.com/veronicabomfim.nutri/" target="_blank" class="social-float instagram-float" aria-label="Instagram da Verônica Bomfim">
   <i class="fab fa-instagram"></i>
 </a>
 <!-- WhatsApp Floating Icon -->
-<a href="https://wa.me/5581998645846?text=Gostaria%20de%20agendar%20uma%20consulta%20com%20voc%C3%AA%2C%20Ver%C3%B4nica%20Bomfim" target="_blank" class="social-float whatsapp-float">
+<a href="https://wa.me/5581998645846?text=Gostaria%20de%20agendar%20uma%20consulta%20com%20voc%C3%AA%2C%20Ver%C3%B4nica%20Bomfim" target="_blank" class="social-float whatsapp-float" aria-label="Agendar consulta via WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
 <!-- Email Floating Icon -->
-<a href="mailto:veronicabomfim.nutri@gmail.com" class="social-float email-float">
+<a href="mailto:veronicabomfim.nutri@gmail.com" class="social-float email-float" aria-label="Enviar e-mail para Verônica Bomfim">
   <i class="fas fa-envelope"></i>
 </a>
 
@@ -774,60 +775,11 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+     </div>
+   </div>
 </div>
 
-<script>
-function enviarWhatsApp() {
-  const nome = document.getElementById('form-nome').value;
-  const telefone = document.getElementById('form-telefone').value;
-  const email = document.getElementById('form-email').value;
-  const atendimento = document.getElementById('form-atendimento').value;
-  const mensagem = document.getElementById('form-mensagem').value;
 
-  let texto = `Olá Verônica! Vim pelo site.\n\n`;
-  if (nome) texto += `*Nome:* ${nome}\n`;
-  if (telefone) texto += `*Telefone:* ${telefone}\n`;
-  if (email) texto += `*E-mail:* ${email}\n`;
-  if (atendimento && atendimento !== 'Selecione...') texto += `*Interesse:* ${atendimento}\n`;
-  if (mensagem) texto += `\n*Mensagem:*\n${mensagem}`;
-
-  const url = `https://wa.me/5581998645846?text=Gostaria%20de%20agendar%20uma%20consulta%20com%20voc%C3%AA%2C%20Ver%C3%B4nica%20Bomfim?text=${encodeURIComponent(texto)}`;
-  window.open(url, '_blank');
-}
-
-function abrirPopupEventos(e) {
-  if (e) e.preventDefault();
-  document.getElementById('popupEventos').classList.add('ativo');
-  document.body.style.overflow = 'hidden';
-}
-
-function fecharPopupEventos() {
-  document.getElementById('popupEventos').classList.remove('ativo');
-  document.body.style.overflow = '';
-}
-
-document.getElementById('popupEventos').addEventListener('click', function(e) {
-  if (e.target === this) {
-    fecharPopupEventos();
-  }
-});
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    fecharPopupEventos();
-  }
-});
-
-// Popup de eventos - desativado temporariamente
-// setTimeout(() => {
-//   abrirPopupEventos();
-//   setTimeout(() => {
-//     fecharPopupEventos();
-//   }, 5000);
-// }, 3000);
-</script>
 
 </body>
 </html>

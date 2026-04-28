@@ -5,8 +5,18 @@
 /* ----- Menu mobile ----- */
 function toggleMenu() {
   const links = document.querySelector('.nav-links');
-  links.classList.toggle('active');
+  const toggle = document.querySelector('.menu-toggle');
+  const isActive = links.classList.toggle('active');
+  toggle.setAttribute('aria-expanded', isActive);
 }
+
+// Teclado no menu toggle
+document.querySelector('.menu-toggle')?.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    toggleMenu();
+  }
+});
 
 /* Fechar menu ao clicar em link */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
