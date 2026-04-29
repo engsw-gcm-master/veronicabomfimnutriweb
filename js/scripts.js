@@ -41,6 +41,19 @@ document.querySelectorAll('.servico-card, .receita-card, .artigo-card').forEach(
   observer.observe(el);
 });
 
+/* ----- Animações de Scroll ----- */
+const scrollObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visivel');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.animar').forEach(el => {
+  scrollObserver.observe(el);
+});
+
 /* ----- Popup Eventos ----- */
 function abrirPopupEventos(e) {
   e.preventDefault();

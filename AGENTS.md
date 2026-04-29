@@ -52,3 +52,9 @@ Site hospedado via **Cloudflare Pages**. Pode ser conectado ao GitHub para deplo
 - Não renomear IDs de seções no `index.html` (ex: `id="servicos"`) — o JavaScript depende deles
 - Ao adicionar novos cards em `secoes/`, seguir a estrutura HTML existente
 - Popups (eventos e eBook) são implementados inline no `index.html` com CSS e JS inline
+
+## Regras de Deploy
+
+- **NUNCA** fazer push para o GitHub sem autorização explícita do usuário
+- Sempre aguardar o usuário testar as alterações localmente antes de subir para o repositório
+- O usuário avisará quando a versão deve ser enviada ao GitHub
