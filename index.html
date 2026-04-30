@@ -71,7 +71,7 @@
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="#inicio">Início</a></li>
+      <li><a href="#inicio"><i class="fas fa-home"></i> Início</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="#eventos">Eventos</a></li>
@@ -80,7 +80,7 @@
       <li><a href="#artigos">Artigos</a></li>
       <li><a href="#ebook">eBook</a></li>
       <li><a href="#contato">Contato</a></li>
-       <li><a
+      <li><a
            href="https://wa.me/5581998645846?text=Gostaria%20de%20agendar%20uma%20consulta%20com%20voc%C3%AA%2C%20Ver%C3%B4nica%20Bomfim"
            class="nav-cta" target="_blank" rel="noopener noreferrer">Agendar Consulta</a></li>
     </ul>
@@ -386,21 +386,33 @@
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- ========== FOOTER SIMPLIFICADO ========== -->
   <footer class="animar">
-    <div class="footer-logo">Verônica Bomfim</div>
-    <div class="footer-sub">Nutricionista · CRN: 49109</div>
-    <div class="footer-divider"></div>
-    <ul class="footer-links">
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#receitas">Receitas</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#artigos">Artigos</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-    <p class="footer-copy">© 2025 Verônica Bomfim Nutricionista. Todos os direitos reservados.</p>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#inicio" style="text-decoration: none; color: inherit;">
+          <div class="footer-logo">
+            <i class="fas fa-home" style="margin-right: 8px; font-size: 1.5rem;"></i>
+            Verônica Bomfim
+          </div>
+          <div class="footer-sub">Nutricionista Funcional Oncológica · CRN: 49109</div>
+        </a>
+        <div class="footer-social" style="margin-top: 1.5rem;">
+          <a href="https://instagram.com/veronicabomfim.nutri" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/5581998645846" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:veronicabomfim.nutri@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>    
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Verônica Bomfim Nutricionista. Todos os direitos reservados.</p>
+    </div>
   </footer>
 
   <!-- ========== SCRIPTS ========== -->
@@ -468,8 +480,8 @@
     .social-float {
       position: fixed;
       bottom: 20px;
-      width: 50px;
-      height: 50px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -477,33 +489,54 @@
       color: white;
       font-size: 24px;
       z-index: 999;
-      transition: transform 0.3s;
+      transition: all 0.3s ease;
+      text-decoration: none;
     }
 
     .social-float:hover {
-      transform: scale(1.1);
+      transform: scale(1.1) translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .social-float::after {
+      content: attr(aria-label);
+      position: absolute;
+      top: -40px;
+      background: rgba(0,0,0,0.8);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .social-float:hover::after {
+      opacity: 1;
     }
 
     .whatsapp-float {
       right: 20px;
-      background: #25D366;
+      background: linear-gradient(135deg, #25D366, #128C7E);
       box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
     }
 
     .instagram-float {
-      right: 80px;
+      right: 86px;
       background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
       box-shadow: 0 4px 15px rgba(225, 48, 108, 0.4);
     }
 
     .email-float {
-      right: 140px;
-      background: #EA4335;
+      right: 152px;
+      background: linear-gradient(135deg, #EA4335, #BB001B);
       box-shadow: 0 4px 15px rgba(234, 67, 53, 0.4);
     }
 
     .eventos-float {
-      right: 200px;
+      right: 218px;
       background: var(--verde-escuro);
       box-shadow: 0 4px 15px rgba(57, 66, 51, 0.4);
     }
